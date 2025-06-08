@@ -1,0 +1,392 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.index-header .logo {
+  height: 40px;
+}
+
+.index-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-ingresar {
+  background-color: #007aff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-ingresar:hover {
+  background-color: #005ecb;
+}
+
+
+.index-main .hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #e8f0fe;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background-color: #e8f0fe;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-empezar {
+  background-color: #007aff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.feature-box {
+  max-width: 250px;
+  text-align: center;
+}
+
+.feature-box h3 {
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+
+.index-footer {
+  background-color: #007aff;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Login ===== */
+.login-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 2 rem;
+  color: #000000;
+}
+
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #005ecb;
+}
+
+.login-form button:hover {
+  background-color: #4a49b1;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  max-width: 150px;
+}
+
+/* ===== Dashboard ===== */
+
+.topbar {
+  background-color: #085bb4;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-nav ul li a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  font-weight: Regular;
+  font-size: 1rem;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.sidebar {
+  background-color: #085bb4;
+  color: rgb(5, 5, 5);
+  padding: 1.5rem;
+  width: 220px; 
+  min-height: 100vh;
+  position: fixed;
+  top: 2.2rem; 
+  left: 0;
+  z-index: 1;
+}
+
+.sidebar h2,
+.sidebar h3 {
+  margin-bottom: 1rem;
+}
+
+
+.dashboard-container {
+  margin-left: 240px; 
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+
+.kanban h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #050505;
+  text-align: center;
+}
+
+
+.board {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow-x: auto; 
+}
+
+
+.column {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 0 0 25%; 
+  min-width: 250px;
+  max-width: 25%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.column h3 {
+  color: #0d0d0e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+.task-card {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border-left: 5px solid #007aff;
+  cursor: grab;
+  transition: transform 0.2s;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+}
+
+
+.pendiente .task-card {
+  border-left-color: #dc3545; 
+}
+
+.enprogreso .task-card {
+  border-left-color: #ffc107; 
+}
+
+.aprobadas .task-card {
+  border-left-color: #28a745; 
+}
+
+.terminadas .task-card {
+  border-left-color: #075eff; 
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+}
+
+.dashboard-container {
+  height: calc(100vh - 60px); 
+  overflow-y: auto;
+}
+
+/* ===== Vista Detalle de Tarea ===== */
+.tarea-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.tarea-titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.tarea-contenido {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tarea-columna {
+  flex: 1;
+  min-width: 300px;
+}
+
+.seccion {
+  margin-bottom: 1.5rem;
+}
+
+.seccion h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.seccion label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.seccion p {
+  background: #f4f4f4;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+select, input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.iconos-colaboradores i {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  color: #444;
+}
+
+.btn-editar {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background: #e0e0e0;
+}
+
+.tarea-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-guardar {
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn-guardar:hover {
+  background-color: #0056b3;
+}
